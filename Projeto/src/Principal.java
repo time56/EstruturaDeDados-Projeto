@@ -10,33 +10,19 @@ public class Principal {
 		int aparece = 0;			
 		
 		do {
-			System.out.println("Escolha a opção desejada: ");
-			System.out.println();
-			System.out.println("1.TAD-Lista Arranjo");
-			System.out.println();
-			System.out.println("2.TAD-Pilha");
-			System.out.println();
-			System.out.println("3.TAD-Fila");
-			System.out.println();
-			System.out.println("4.TAD-Lista de Nodos");
-			System.out.println();
-			System.out.println("5.TAD-Árvore Genérica");
-			System.out.println();
-			System.out.println("6.TAD-Árvore Binária");
-			System.out.println();
-			System.out.println("7.TAD-Fila de Prioridade");
-			System.out.println();
-			System.out.println("8.TAD-Mapa");
-			System.out.println();
-			System.out.println("9.TAD-Dicionário");
-			System.out.println();
-			System.out.println("10.TAD-Mapa Ordernado - ABB");
-			System.out.println();
-			System.out.println("11.TAD-Mapa Ordernado - AVL");
-			System.out.println();
-			System.out.println("12.TAD-Grafos");
-			System.out.println();
-				
+			System.out.println("Escolha a opção desejada: \r\n \r\n"
+					+ "1.TAD-Lista Arranjo \r\n \r\n"
+					+ "2.TAD-Pilha \r\n \r\n"
+					+ "3.TAD-Fila \r\n \r\n"
+					+ "4.TAD-Lista de Nodos \r\n \r\n"
+					+ "5.TAD-Árvore Genérica \r\n \r\n"
+					+ "6.TAD-Árvore Binária \r\n \r\n"
+					+ "7.TAD-Fila de Prioridade \r\n \r\n"
+					+ "8.TAD-Mapa \r\n \r\n"
+					+ "9.TAD-Dicionário \r\n \r\n"
+					+ "10.TAD-Mapa Ordernado - ABB \r\n \r\n"
+					+ "11.TAD-Mapa Ordernado - AVL \r\n \r\n"
+					+ "12.TAD-Grafos \r\n \r\n");
 			try {
 				aparece = entrada.nextInt();
 				while(aparece > 12 || aparece <=0) {
@@ -45,12 +31,11 @@ public class Principal {
 				}
 			}catch (Exception e) {
 				System.out.println("Você deve digitar apenas os números disponíveis da lista!");
-			}
-	
+			}	
 			
 			switch(aparece) {	
 			case 1:
-				ListaArranjo.teste();
+				ListaArranjo.initListaArranjo();
 				aparece = 0;
 				break;
 			case 2:
