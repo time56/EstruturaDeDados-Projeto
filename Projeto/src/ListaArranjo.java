@@ -13,11 +13,12 @@ public class ListaArranjo {
 					+ "1.Definição \r\n"
 					+ "2.Exemplo de como adicionar \r\n"
 					+ "3.Exemplo de como remover \r\n"
-					+ "4.Exemplo de como retornar um elemento");
+					+ "4.Exemplo de como retornar um elemento \r\n"
+					+ "5.Sair do TAD Lista Arranjo e retornar ao menu principal.");
 			System.out.println("-------------------------------------------------------------------------------------------------------");
 			try {
 				aparece = entrada.nextInt();
-				while(aparece > 4 || aparece <=0) {
+				while(aparece > 5 || aparece <=0) {
 					System.out.println("Opção inválida, digite uma opção válida: ");
 					aparece = entrada.nextInt();
 				}
@@ -41,7 +42,9 @@ public class ListaArranjo {
 			case 4:
 				retornarElemento();
 				aparece = 0;
-				break;				
+				break;		
+			case 5:
+				Principal.init();
 			default:
 				aparece = 0;				
 			}
