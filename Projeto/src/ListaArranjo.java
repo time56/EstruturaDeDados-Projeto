@@ -27,8 +27,8 @@ public class ListaArranjo {
 			}	
 			
 			switch(aparece) {	
-			case 1:
-				definicao();
+			case 1:				
+				definicao();	
 				aparece = 0;
 				break;
 			case 2:
@@ -45,8 +45,10 @@ public class ListaArranjo {
 				break;		
 			case 5:
 				Principal.init();
+				aparece = 0;
+				break;
 			default:
-				aparece = 0;				
+				aparece = 0;			
 			}
 
 		}while(aparece != 0);
