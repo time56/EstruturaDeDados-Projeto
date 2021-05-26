@@ -49,7 +49,7 @@ public class Principal {
 				aparece = 0;
 				break;
 			case 3:
-				Fila.teste();
+				Fila.initFila();
 				aparece = 0;
 				break;
 			case 4:

@@ -116,7 +116,7 @@ public class ListaArranjo {
 		System.out.println("Método Remover: \r\n");
 		
 		System.out.println("Exemplo de algoritmo: \r\n"
-				+ "Algoritmo remove(i): \r\n"
+				+ " remove(i): \r\n"
 				+ "		e = A[i]  // e é uma variável temporária\r\n"
 				+ "		para j = i, i+1, ... ,n-2 faça \r\n"
 				+ "			A[j] = A[j + 1] // substitui pelo elemento removido\r\n"
