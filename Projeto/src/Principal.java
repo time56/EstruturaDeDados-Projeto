@@ -28,10 +28,11 @@ public class Principal {
 					+ "9.TAD-Dicionário \r\n \r\n"
 					+ "10.TAD-Mapa Ordernado - ABB \r\n \r\n"
 					+ "11.TAD-Mapa Ordernado - AVL \r\n \r\n"
-					+ "12.TAD-Grafos \r\n \r\n");
+					+ "12.TAD-Grafos \r\n \r\n"
+					+ "13. Sair \r\n \r\n");
 			try {
 				aparece = entrada.nextInt();
-				while(aparece > 12 || aparece <=0) {
+				while(aparece > 13 || aparece <=0) {
 					System.out.println("Opção inválida, digite uma opção válida: ");
 					aparece = entrada.nextInt();
 				}
@@ -65,7 +66,7 @@ public class Principal {
 				aparece = 0;
 				break;
 			case 7:
-				FilaDePrioridade.teste();
+				FilaDePrioridade.initFilaPrioridade();
 				aparece = 0;
 				break;
 			case 8:
@@ -86,6 +87,9 @@ public class Principal {
 				break;
 			case 12:
 				Grafos.teste();
+				aparece = 0;
+				break;
+			case 13:
 				aparece = 0;
 				break;
 			default:
