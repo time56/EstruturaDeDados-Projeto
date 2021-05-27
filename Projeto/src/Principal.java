@@ -46,7 +46,7 @@ public class Principal {
 				aparece = 0;
 				break;
 			case 2:
-				Pilha.teste();
+				Pilha.initPilha();
 				aparece = 0;
 				break;
 			case 3:
