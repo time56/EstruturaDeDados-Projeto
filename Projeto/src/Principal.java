@@ -70,7 +70,7 @@ public class Principal {
 				aparece = 0;
 				break;
 			case 8:
-				Mapa.teste();
+				Mapa.initMapa();
 				aparece = 0;
 				break;
 			case 9:
