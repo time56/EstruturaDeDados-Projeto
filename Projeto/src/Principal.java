@@ -74,7 +74,7 @@ public class Principal {
 				aparece = 0;
 				break;
 			case 9:
-				Dicionario.teste();
+				Dicionario.initDicionario();
 				aparece = 0;
 				break;
 			case 10:

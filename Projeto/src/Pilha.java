@@ -12,24 +12,23 @@ public class Pilha {
 		int num;
 
 		TadPilha p = new TadPilha();
-		p.push(3);
-		p.push(5);
 		do {
-			System.out.println("Escolha a op√ß√£o desejada para o TAD-Pilha: \r\n \r\n"
-					+ "1.Defini√ß√£o \r\n"
+			System.out.println("-------------------------------------------------------------------------------------------------------");
+			System.out.println("Escolha a opÁ„o desejada para o TAD-Pilha: \r\n \r\n"
+					+ "1.DefiniÁ„o \r\n"
 					+ "2.Exemplo de como adicionar um elemento \r\n"
 					+ "3.Exemplo de como remover um elemento \r\n"
 					+ "4.Exemplo de como retornar o elemento do topo \r\n"
-					+ "5.Exemplo de como verificar se a pilha est√° cheia");
+					+ "5.Exemplo de como verificar se a pilha est· cheia");
 			System.out.println("-------------------------------------------------------------------------------------------------------");
 			try {
 				aparece = entrada.nextInt();
 				while(aparece > 5 || aparece <=0) {
-					System.out.println("Op√ß√£o inv√°lida, digite uma op√ß√£o v√°lida: ");
+					System.out.println("OpÁ„o inv·lida, digite uma opÁ„o v·lida: ");
 					aparece = entrada.nextInt();
 				}
 			}catch (Exception e) {
-				System.out.println("Voc√™ deve digitar apenas os n√∫meros dispon√≠veis da lista!");
+				System.out.println("VocÍ deve digitar apenas os n˙meros disponÌveis da lista!");
 			}
 
 			switch(aparece) {
@@ -38,7 +37,7 @@ public class Pilha {
 					aparece = 0;
 					break;
 				case 2:
-					System.out.println("Digite um n√∫mero para adicionar: ");
+					System.out.println("Digite um n˙mero para adicionar: ");
 					num = entrada.nextInt();
 					p.push(num);
 					System.out.println(">> Elemento " + num + " adicionado!");
@@ -46,7 +45,7 @@ public class Pilha {
 					initPilha();
 					break;
 				case 3:
-					System.out.println("O item do topo ser√° exclu√≠do");
+					System.out.println("O item do topo ser· excluÌdo");
 					p.pop();
 					aparece = 0;
 					initPilha();
@@ -73,17 +72,17 @@ public class Pilha {
 	}
 
 	public static void definicao() {
-		System.out.print("Defini√ß√£o: ");
-		System.out.println("Pilhas s√£o estruturas de dados que respeitam uma ordem de entrada e sa√≠da \r\n"
-				+ "conhecido como LIFO, isso quer dizer que o ultimo elemento inserido ser√° o primeiro a sair \r\n"
-				+ "lembrando uma pilha de pratos, que √© de onde seu nome metaforicamente deriva");
+		System.out.print("DefiniÁ„o: ");
+		System.out.println("Pilhas s„o estruturas de dados que respeitam uma ordem de entrada e saÌda \r\n"
+				+ "conhecido como LIFO, isso quer dizer que o ultimo elemento inserido ser· o primeiro a sair \r\n"
+				+ "lembrando uma pilha de pratos, que s„o de onde seu nome metaforicamente deriva");
 		System.out.println();
 
 
-		System.out.println("Como um TAD, a pilha tem os seguintes m√©todos:\r\n"
+		System.out.println("Como um TAD, a pilha tem os seguintes mÈtodos:\r\n"
 				+ "* push(e)   = Insere o objeto no topo da pilha; \r\n"
 				+ "* pop()     = Remove o elemento do topo da pilha, retornando um erro caso a pilha esteja vazia \r\n"
-				+ "Outros m√©todos que podem ser definidos: top(), isFull() e isEmpty()");
+				+ "Outros mÈtodos que podem ser definidos: top(), isFull() e isEmpty()");
 		System.out.println("-------------------------------------------------------------------------------------------------------");
 
 		initPilha();

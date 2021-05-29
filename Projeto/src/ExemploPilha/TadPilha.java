@@ -11,7 +11,7 @@ public class TadPilha {
 
     public void push(int e){
         if (isFull()){
-            throw new RuntimeException(">> Pilha cheia, impossÃ­vel inserir elementos");
+            throw new RuntimeException(">> Pilha cheia, impossível inserir elementos");
         }
         topo++;
         elementos[topo] = e;
@@ -19,30 +19,30 @@ public class TadPilha {
 
     public int pop(){
         if(isEmpty()){
-            throw new RuntimeException(">> Pilha vazia, impossÃ­vel remover elementos");
+            throw new RuntimeException(">> Pilha vazia, impossível remover elementos");
         }
         int e;
         e = elementos[topo];
         topo--;
-        System.out.println(">> Elemento " + e + " excluÃ­do!");
+        System.out.println(">> Elemento " + e + " excluído!");
         return e;
     }
 
     public boolean isEmpty(){
         if (topo == -1){
-            System.out.println(">> A pilha estÃ¡ vazia");
+            System.out.println(">> A pilha está vazia");
             return true;
         }
-        System.out.println(">> A pilha nÃ£o estÃ¡ vazia");
+        System.out.println(">> A pilha não está vazia");
         return false;
     }
 
     public boolean isFull(){
         if (topo == 9){
-            System.out.println(">> A pilha estÃ¡ cheia");
+            System.out.println(">> A pilha está cheia");
             return true;
         }
-        System.out.println(">> A pilha nÃ£o estÃ¡ cheia");
+        System.out.println(">> A pilha não está cheia");
         return false;
     }
 
@@ -50,7 +50,7 @@ public class TadPilha {
         if(isEmpty()){
             throw new RuntimeException(">> Pilha vazia");
         }
-        System.out.println(">> Elemento " + elementos[topo] + " Ã© o primeiro da pilha");
+        System.out.println(">> Elemento " + elementos[topo] + " é o primeiro da pilha");
         return elementos[topo];
     }
 }
