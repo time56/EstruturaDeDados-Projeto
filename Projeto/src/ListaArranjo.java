@@ -1,24 +1,32 @@
 import java.util.Scanner;
 
+import ListaArranjo.ArrayIndexList;
+
 public class ListaArranjo {
+	
+	static ArrayIndexList<Integer> A = new ArrayIndexList<Integer>();
+	static Scanner entrada = new Scanner(System.in);
 
 	public static void initListaArranjo() {
-		
-		Scanner entrada = new Scanner(System.in);
-		
+
 		int aparece = 0;			
 		
 		do {
-			System.out.println("Escolha a opção desejada para o TAD-Lista Arranjo: \r\n \r\n"
+			System.out.println("Escolha a opção desejada para o TAD-Lista Arranjo, será possivel testar a lista com dados do tipo Inteiro: \r\n \r\n"
 					+ "1.Definição \r\n"
-					+ "2.Exemplo de como adicionar \r\n"
-					+ "3.Exemplo de como remover \r\n"
-					+ "4.Exemplo de como retornar um elemento \r\n"
-					+ "5.Sair do TAD Lista Arranjo e retornar ao menu principal.");
+					+ "2.Exemplo de código como adicionar \r\n"
+					+ "3.Exemplo de código como remover \r\n"
+					+ "4.Exemplo de código como retornar um elemento \r\n"
+					+ "5.Obter o tamanho da lista \r\n"
+					+ "6.Saber se a lista está vazia \r\n"
+					+ "7.Obter o elemento armazenado em um dado índice \r\n"
+					+ "8.Adicionar um elemento num dado índice \r\n"
+					+ "9.Remover um elemento num dado índice \r\n"			
+					+ "10.Sair do TAD Lista Arranjo e retornar ao menu principal.");
 			System.out.println("-------------------------------------------------------------------------------------------------------");
 			try {
 				aparece = entrada.nextInt();
-				while(aparece > 5 || aparece <=0) {
+				while(aparece > 10 || aparece <=0) {
 					System.out.println("Opção inválida, digite uma opção válida: ");
 					aparece = entrada.nextInt();
 				}
@@ -44,9 +52,27 @@ public class ListaArranjo {
 				aparece = 0;
 				break;		
 			case 5:
-				Principal.init();
+				retornarTamanho();
 				aparece = 0;
 				break;
+			case 6:
+				retornarSeListaEstaVazia();
+				aparece = 0;
+				break;
+			case 7: 
+				getElemento();
+				aparece = 0;
+				break;
+			case 8:
+				add();
+				aparece = 0;
+				break;
+			case 9:
+				remove();
+				aparece = 0;
+				break;
+			case 10:
+				Principal.init();
 			default:
 				aparece = 0;			
 			}
@@ -154,4 +180,84 @@ public class ListaArranjo {
 		
 		initListaArranjo();
 	}
+	
+	// Retorna o número de elementos da lista
+	public static void retornarTamanho() {
+		System.out.println("O número de elementos da lista é: " + A.size() +"\r\n");
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initListaArranjo();
+	}
+	
+	// Retorna se a lista está vazia
+	public static void retornarSeListaEstaVazia() {
+		if (A.isEmpty()) {
+			System.out.println("A lista está vazia!");
+		} else {
+			System.out.println("A lista não está vazia!");
+		}
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initListaArranjo();
+	}
+	
+	// Retorna o elemento armazenado num dado índice
+	public static void getElemento() {
+		
+		if(A.isEmpty()) {
+			System.out.println("A lista está vazia, não será possivel retornar o elemento");
+		}else {
+			try {
+				System.out.println("Digite o índice dejado: ");
+				int indice = entrada.nextInt();
+				A.get(indice);	
+				System.out.println(A);
+			}catch (Exception e) {
+				System.out.println("índice inexistente");
+			}
+		}		
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initListaArranjo();
+	}
+	
+	// Insere um elemento num dado índice
+	public static void add() {
+		System.out.println("Digite o índice dejado: \r\n");
+		int indice = entrada.nextInt();
+		
+		System.out.println("Digite o elemento dejado: \r\n");
+		int elemento = entrada.nextInt();
+		
+		A.add(indice, elemento);	
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initListaArranjo();
+	}
+	
+	// Remove o elemento armazenado num dado índice
+	public static void remove() {
+		if(A.isEmpty()) {
+			System.out.println("A lista está vazia, não será possivel remover um elemento");
+		}else {
+			try {
+				System.out.println("Digite o índice dejado: \r\n");
+				int indice = entrada.nextInt();
+				
+				A.remove(indice);
+			}catch (Exception e) {
+				System.out.println("Não foi possível remover o elemento");
+			}
+		}
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initListaArranjo();
+	}
+	
+	
 }
