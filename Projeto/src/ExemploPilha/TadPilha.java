@@ -33,7 +33,6 @@ public class TadPilha {
             System.out.println(">> A pilha está vazia");
             return true;
         }
-        System.out.println(">> A pilha não está vazia");
         return false;
     }
 
@@ -42,7 +41,6 @@ public class TadPilha {
             System.out.println(">> A pilha está cheia");
             return true;
         }
-        System.out.println(">> A pilha não está cheia");
         return false;
     }
 
@@ -53,4 +51,9 @@ public class TadPilha {
         System.out.println(">> Elemento " + elementos[topo] + " é o primeiro da pilha");
         return elementos[topo];
     }
+
+    public void menu(){
+
+    }
+
 }

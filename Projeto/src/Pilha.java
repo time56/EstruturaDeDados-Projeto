@@ -35,6 +35,7 @@ public class Pilha {
 				case 1:
 					definicao();
 					aparece = 0;
+					p.menu();
 					break;
 				case 2:
 					System.out.println("Digite um número para adicionar: ");
@@ -42,27 +43,27 @@ public class Pilha {
 					p.push(num);
 					System.out.println(">> Elemento " + num + " adicionado!");
 					aparece = 0;
-					initPilha();
+					p.menu();
 					break;
 				case 3:
 					System.out.println("O item do topo será excluído");
 					p.pop();
 					aparece = 0;
-					initPilha();
+					p.menu();
 					break;
 				case 4:
 					p.top();
 					aparece = 0;
-					initPilha();
+					p.menu();
 					break;
 				case 5:
 					p.isFull();
 					aparece = 0;
-					initPilha();
+					p.menu();
 					break;
 				default:
 					aparece = 0;
-					initPilha();
+					p.menu();
 			}
 
 		}while(aparece != 0);
@@ -85,7 +86,6 @@ public class Pilha {
 				+ "Outros métodos que podem ser definidos: top(), isFull() e isEmpty()");
 		System.out.println("-------------------------------------------------------------------------------------------------------");
 
-		initPilha();
 	}
 
 }
