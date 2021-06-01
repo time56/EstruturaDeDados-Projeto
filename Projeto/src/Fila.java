@@ -1,24 +1,32 @@
 import java.util.Scanner;
 
+import Fila.QueueArray;
+
 public class Fila {
 	
+	static QueueArray<Integer> Q = new QueueArray<Integer>(10);
+	static Scanner entrada = new Scanner(System.in);
+	
 	public static void initFila() {
-		
-		Scanner entrada = new Scanner(System.in);
-		
+
 		int aparece = 0;			
 		
 		do {
-			System.out.println("Escolha a opção desejada para o TAD-Fila: \r\n \r\n"
+			System.out.println("Escolha a opção desejada para o TAD-Fila, será possivel testar a fila com dados do tipo Inteiro: \r\n \r\n"
 					+ "1.Definição \r\n"
-					+ "2.Exemplo de como adicionar \r\n"
-					+ "3.Exemplo de como remover \r\n"
-					+ "4.Exemplo de como retornar um elemento \r\n"
-					+ "5.Sair do TAD Lista Arranjo e retornar ao menu principal.");
+					+ "2.Exemplo de código de como adicionar \r\n"
+					+ "3.Exemplo de código de como remover \r\n"
+					+ "4.Exemplo de código de como retornar um elemento \r\n"
+					+ "5.Adicionar elemento no fim da fila \r\n"
+					+ "6.Retornar sem remover, o objeto na frente da fila \r\n"
+					+ "7.Remover e retorna o objeto da frente da fila \r\n"
+					+ "8.Tamanho da fila \r\n"
+					+ "9.Verificar se a fila está vazia \r\n"
+					+ "10.Sair do TAD Fila e retornar ao menu principal. \r\n");
 			System.out.println("-------------------------------------------------------------------------------------------------------");
 			try {
 				aparece = entrada.nextInt();
-				while(aparece > 5 || aparece <=0) {
+				while(aparece > 10 || aparece <=0) {
 					System.out.println("Opção inválida, digite uma opção válida: ");
 					aparece = entrada.nextInt();
 				}
@@ -44,9 +52,29 @@ public class Fila {
 				aparece = 0;
 				break;
 			case 5:
+				add();
+				aparece = 0;
+				break;		
+			case 6:
+				retornar();
+				aparece = 0;
+				break;
+			case 7:
+				remover();
+				aparece = 0;
+				break;
+			case 8:
+				tamanho();
+				aparece = 0;
+				break;
+			case 9:
+				vazia();
+				aparece = 0;
+				break;
+			case 10:
 				Principal.init();
 				aparece = 0;
-				break;			
+				break;
 			default:
 				aparece = 0;			
 			}
@@ -58,6 +86,7 @@ public class Fila {
 	}
 	
 	public static void definicao() {
+		
 		System.out.println("A fila é uma coleção de objetos que são inseridos e removidos de\r\n"
 				+ "acordo com o princípio: 'o primeiro que entra é o primeiro que sai (First-In-First-Out: FIFO)'. \r\n \r\n"
 				+ "*O acesso aos elementos e sua remoção são restritos ao primeiro elemento da\r\n"
@@ -65,12 +94,13 @@ public class Fila {
 				+ "*A inserção de elementos é restrita ao fim da sequência, que é chamada de fim da fila. \r\n \r\n");
 		
 		System.out.println("Como um TAD, uma fila tem os seguintes métodos:\r\n \r\n"
-				+ "*enqueue(e) = Insere o elemento e no fim da fila; \r\n"
+				+ "*enqueue(e) = Insere o elemento no fim da fila; \r\n"
 				+ "*dequeue() = Retira e retorna o objeto da frente da fila; \r\n"
 				+ "*size() = Retorna o número de objetos na fila; \r\n"
 				+ "*isEmpty() = Retorna um booleano indicando se a fila está vazia \r\n"
 				+ "*front() = Retorna, mas não remove, o objeto na frente da fila \r\n \r\n"
-				+ "Para os métodos dequeue() e front(), ocorre um erro se a fila estiver vazia. \r\n");
+				+ "Para os métodos dequeue() e front(), ocorre um erro se a fila estiver vazia. \r\n \r\n"
+				+ "Será possivel testar a fila com dados do tipo Inteiro");
 		
 		initFila();
 	}
@@ -149,5 +179,72 @@ public class Fila {
 		
 		initFila();		
 	}
+	
+	public static void add() {
+		
+		System.out.println("Digite o elemento dejado: ");
+		int elemento = entrada.nextInt();
+			
+		try {
+			Q.enqueue(elemento);
+			System.out.println("Fila: " + Q);
+		}catch (Exception e) {
+			System.out.println("Não foi possivel adicionar o elemento na fila");
+		}
+		
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initFila();
+	}
+	
+	public static void retornar() {
+		if(Q.isEmpty()) {
+			System.out.println("Fila está vazia, não será possível retornar o elemento");
+		}else {
+			Q.front();
+			System.out.println("Fila: " + Q);
+		}
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initFila();
+	}
+	
+	public static void remover() {
+		if(Q.isEmpty()) {
+			System.out.println("Fila está vazia, não será possível remover o elemento");
+		}else {
+			Q.dequeue();
+			System.out.println("Fila "+ Q);
+		}
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initFila();
+	}
+	
+	public static void tamanho() {
+		
+		System.out.println("Tamanho da fila: " + Q.size());
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initFila();
+	}
+	
+	public static void vazia() {
+		if(Q.isEmpty()) {
+			System.out.println("A fila está vazia");
+		}else {
+			System.out.println("Fila não está vazia: " + Q);
+		}		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initFila();
+	}
+	
+	
+	
 
 }
