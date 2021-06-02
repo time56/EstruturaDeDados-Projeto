@@ -282,6 +282,7 @@ public class ListaDeNodos {
 		int elemento = entrada.nextInt();
 		
 		N.addFirst(elemento);
+		System.out.println("Lista: " + N);
 		
 		System.out.println("-------------------------------------------------------------------------------------------------------");
 		
@@ -300,6 +301,7 @@ public class ListaDeNodos {
 			try{	
 				Position<Integer> p1 = N.first();				
 				N.addAfter(p1, elemento);				
+				System.out.println("Lista: " + N);
 			}catch (Exception e) {
 				System.out.println("Não foi possivel adicionar o elemento");
 			}			
@@ -324,6 +326,7 @@ public class ListaDeNodos {
 				Position<Integer> p2 = N.next(p1);
 				
 				N.addBefore(p2, elemento);
+				System.out.println("Lista: " + N);
 			}catch (Exception e) {
 				System.out.println("Não foi possivel adicionar o elemento");
 			}			

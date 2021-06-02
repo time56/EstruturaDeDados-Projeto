@@ -194,8 +194,10 @@ public class ListaArranjo {
 	public static void retornarSeListaEstaVazia() {
 		if (A.isEmpty()) {
 			System.out.println("A lista está vazia!");
+			System.out.println("Lista:" + A);
 		} else {
 			System.out.println("A lista não está vazia!");
+			System.out.println("Lista:" + A);
 		}
 		
 		System.out.println("-------------------------------------------------------------------------------------------------------");
@@ -213,7 +215,7 @@ public class ListaArranjo {
 				System.out.println("Digite o índice dejado: ");
 				int indice = entrada.nextInt();
 				A.get(indice);	
-				System.out.println(A);
+				System.out.println("Lista:" + A);
 			}catch (Exception e) {
 				System.out.println("índice inexistente");
 			}
@@ -232,7 +234,12 @@ public class ListaArranjo {
 		System.out.println("Digite o elemento dejado: \r\n");
 		int elemento = entrada.nextInt();
 		
-		A.add(indice, elemento);	
+		try {
+			A.add(indice, elemento);		
+			System.out.println("Lista:" + A);
+		}catch (Exception e) {
+			System.out.println("Não foi possível adicionar o elemento no índice desejado");
+		}
 		
 		System.out.println("-------------------------------------------------------------------------------------------------------");
 		
@@ -246,9 +253,9 @@ public class ListaArranjo {
 		}else {
 			try {
 				System.out.println("Digite o índice dejado: \r\n");
-				int indice = entrada.nextInt();
-				
+				int indice = entrada.nextInt();				
 				A.remove(indice);
+				System.out.println("Lista:" + A);
 			}catch (Exception e) {
 				System.out.println("Não foi possível remover o elemento");
 			}
