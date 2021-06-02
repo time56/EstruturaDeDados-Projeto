@@ -2,7 +2,10 @@
 public class ArvoreBinaria {
 	
 	public static void teste() {
-		System.out.println("Arvore Binária");
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		System.out.println("Este TAD não foi implementeado.");
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		Principal.init();
 	}
 
 }

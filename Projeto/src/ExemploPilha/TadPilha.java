@@ -52,8 +52,5 @@ public class TadPilha {
         return elementos[topo];
     }
 
-    public void menu(){
-
-    }
 
 }
