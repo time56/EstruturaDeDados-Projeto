@@ -78,7 +78,7 @@ public class Principal {
 				aparece = 0;
 				break;
 			case 10:
-				MapaOrdernadoAbb.teste();
+				MapaOrdernadoAbb.initMapaOrdenado();
 				aparece = 0;
 				break;
 			case 11:
