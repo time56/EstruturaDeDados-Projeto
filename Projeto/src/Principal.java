@@ -54,7 +54,7 @@ public class Principal {
 				aparece = 0;
 				break;
 			case 4:
-				ListaDeNodos.teste();
+				ListaDeNodos.initListaNodos();
 				aparece = 0;
 				break;
 			case 5:

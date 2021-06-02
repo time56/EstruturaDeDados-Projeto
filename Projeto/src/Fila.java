@@ -99,8 +99,9 @@ public class Fila {
 				+ "*size() = Retorna o número de objetos na fila; \r\n"
 				+ "*isEmpty() = Retorna um booleano indicando se a fila está vazia \r\n"
 				+ "*front() = Retorna, mas não remove, o objeto na frente da fila \r\n \r\n"
-				+ "Para os métodos dequeue() e front(), ocorre um erro se a fila estiver vazia. \r\n \r\n"
-				+ "Será possivel testar a fila com dados do tipo Inteiro");
+				+ "Para os métodos dequeue() e front(), ocorre um erro se a fila estiver vazia. \r\n \r\n");
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
 		
 		initFila();
 	}
@@ -128,6 +129,8 @@ public class Fila {
 				+ "                     tail = node; // atualiza referência ao nodo do final\r\n"
 				+ "                     size++;\r\n"
 				+ "         } \r\n");
+		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
 		
 		initFila();
 	}
@@ -157,6 +160,8 @@ public class Fila {
 				+ "                          return tmp;\r\n"
 				+ "} \r\n");
 		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
 		initFila();
 	}
 	
@@ -177,7 +182,9 @@ public class Fila {
 				+ "         return q[f]"
 				+ "      } \r\n");
 		
-		initFila();		
+		System.out.println("-------------------------------------------------------------------------------------------------------");
+		
+		initFila();	
 	}
 	
 	public static void add() {
