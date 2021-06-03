@@ -17,9 +17,7 @@ public class Pilha {
 			System.out.println("Escolha a opção desejada para o TAD-Pilha: \r\n \r\n"
 					+ "1.Definição \r\n"
 					+ "2.Exemplo de como adicionar um elemento \r\n"
-					+ "3.Exemplo de como remover um elemento \r\n"
-					+ "4.Exemplo de como retornar o elemento do topo \r\n"
-					+ "5.Exemplo de como verificar se a pilha está cheia");
+					+ "3.Exemplo de como remover um elemento \r\n");
 			System.out.println("-------------------------------------------------------------------------------------------------------");
 			try {
 				aparece = entrada.nextInt();
